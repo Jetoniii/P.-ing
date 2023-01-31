@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave a comment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon"  href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk2XBywdtgLSwKzI3MEW15PzC4jB9djXQ_4g&usqp=CAU"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="qwerty.js"></script>
+    
+</head>
+<body>
+    <nav>
+        <label for="show-menu" class="show-menu">Menu</label>
+        <input type="checkbox" id="show-menu" role="button">
+        <ul id=menu>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="biography.html">Biography</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="qwertyu.html">Leave A Comment</a></li>
+        </ul>
+      </nav>
+    <div class="bossii">
+        <form id="form" action="/" onsubmit="sendEmail(); reset(); return false;" >
+            <h1>Send a message!</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="sendmessage">
+                <label for="text">Send a message</label>
+                <input id="text" name="message" type="text" >
+                <div class="error"></div>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>  
+    <script src=" https://smtpjs.com/v3/smtp.js" ></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "testacc4projects@gmail.com",
+                Password : "webengeneering",
+                To : 'specienzhdukjerigi@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "Message from WEBpage users!",
+                Body : "Username: "+ document.getElementById("username").value
+                +"<br> email: "+ documetn.getElementById("email").value
+                +"<br> message: "+document.getElementById("text")
+             }).then(
+                message => alert("Message sent successfully!")
+                 );
+        }
+    </script>
+</body>
+</html>

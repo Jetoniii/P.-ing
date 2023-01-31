@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body {
+    margin: 1px;
+    background-color: #37919121;
+  }
+  
+
+  h1 {
+    font-size: 68px;
+    text-align: center; 
+    font-family: 'Ubuntu';
+  }
+  
+  /*general styles*/
+  *,
+  *:before,
+  *:after {
+    box-sizing: inerit;
+  }
+  
+  .class-center {
+    text-align: center;
+  }
+  .class-left-align{
+    text-align: left;
+  }
+  
+  .responsive-img {
+    max-width: 500px;
+    border-radius: 1px;
+    
+  }
+  
+  .pnx-msg-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  ol {
+    padding: 20px;
+    list-style-type: lower-alpha;
+    position: calc(13);
+  }
+  ol li {
+    float: left;
+    margin: 0 10px;
+    padding: 0 10px;
+  }
+  
+  /* guote style*/
+  #quote_div {
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 900px;
+    border-radius: 4px;
+  }
+  blockquote {
+    border-left: none;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+    width: 100%;
+    margin:  0;
+    padding:  0px;
+    line-height: 1.45;
+    position: relative;
+    text-align: justify;
+  }
+  blockquote cite {
+    color: #999999;
+    font-size: 20px;
+    display: block;
+    margin-top: 5px;
+    padding-right: 6px;
+  }
+  /*-- --*/
+  
+  /*Responsve navbar style*/
+  
+  .hidden {
+    width: auto;
+  }
+  /*Strip the ul of padding and list styling*/
+  nav ul {
+    position: fixed;
+    width: 100%;
+    list-style-type: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 3;
+
+  }
+  /*Create a horizontal list with spacing*/
+  nav li {
+    display: inline-block;
+
+  }
+  /*Style for menu links*/
+  nav li a {
+    display: block;
+    min-width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    background-color: rgb(51, 51, 51);
+    text-decoration: none;
+  }
+  /*Hover state for top level links*/
+  nav li:hover a {
+    background: #151faa;
+    transition: 0.6s;
+  }
+  
+  
+
+  /*Style 'show menu' label button and hide it by default*/
+  .show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: #222;
+    text-align: center;
+    padding: 15px 0;
+    display: none;
+  }
+  .show-menu:hover {
+    cursor: pointer;
+  }
+  /*Hide checkbox*/
+  input[type="checkbox"] {
+    display: none;
+  }
+  /*Show menu when invisible checkbox is checked*/
+  input[type="checkbox"]:checked ~ #menu {
+    display: block;
+  }
+  /*Responsive Styles*/
+  @media screen and (max-width: 760px) {
+    /*Make dropdown links appear inline*/
+    nav ul {
+      position: static;
+      display: none;
+    }
+    /*Create vertical spacing*/
+    nav li {
+      margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    nav ul li,
+    nav li a {
+      width: 100%;
+    }
+    /*Display 'show menu' link*/
+    .show-menu {
+      display: block;
+    }
+  }
+  /*-- --*/
+  
+  /* Image Slider css */
+  .slider {
+    box-shadow: 0px 4px 10px #3606b991;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+    border-radius: 4px;
+    max-height: 550px;
+  }
+  
+  .slider ul {
+    width: 1000%;
+    height: auto;
+    position: relative;
+    list-style: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    animation: slide-animation 10s ease infinite;
+  }
+  
+  .slider ul:hover {
+    animation-play-state: paused;
+  }
+  
+  .slider li {
+    width: 10%;
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  @keyframes slide-animation {
+    0% {
+      left: 0%;
+    }
+    11.1% {
+      left: 0%;
+    }
+    22.2% {
+      left: 0%;
+    }
+  
+    33.3% {
+      left: -100%;
+    }
+  
+    44.4% {
+      left: -100%;
+    }
+  
+    55.5% {
+      left: -100%;
+    }
+  
+    66.6% {
+      left: -200%;
+    }
+  
+    77.7% {
+      left: -200%;
+    }
+  
+    88.8% {
+      left: -200%;
+    }
+    99.9% {
+      left: 0%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  /*-- --*/
+  
+  /*Container for responsive website*/
+  
+  .container {
+    padding: 10px 20px;
+    padding-bottom: 40px;
+    padding-top: 35px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom:11px;
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /*-- --*/
+  
+  /*Flexbox style */
+  .flex-container {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;  
+  }
+  
+  .flex-img-container {
+    max-width: 250px;
+    min-width: 250px;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .flex-par-container {
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  .flex-par-container h2 {
+    font-size: 20px;
+  }
+  .flex-par-container p {
+    font-size: 16px;
+  }
+  .flex-par-container a {
+    font-size: 14px;
+  }
+  /*-- --*/
+  
+ 
+  
+  
+  .column-left {
+    float: left;
+    width: 50%;
+  }
+  .column-right {
+    float: right;
+    width: 50%;
+  }
+  
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    text-align: left;
+  }
+  
+  /* Parallax Scrolling Effect*/
+  
+  
+
+
+  .career-div{
+      overflow: auto;
+  }
+  
+  .slide {
+      position: relative;
+      padding: 25vh 10%;
+      min-height: 90%;
+      width: 100%;
+      box-sizing: border-box;
+      box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.7);
+      transform-style: inherit;
+      z-index: -1;
+  }
+  
+  .slide:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  }
+  
+  
+  /*Show the full picture in background*/
+  .slide, .slide:before {
+      background: 50% 50% / cover;
+  }
+  
+  .header {
+      font-size: 200%;
+      color: #000;
+      text-shadow: 0 2px 2px #000;
+  }
+  
+  
+  
+  #alltitle{
+      width: 95%;
+  }
+  
+  #career{
+      text-align: left;
+  }
+  
+  #title {
+      width: 100%;
+      margin-top: 30px;
+      background-image: url("https://ca-times.brightspotcdn.com/dims4/default/17f0123/2147483647/strip/true/crop/4833x2935+0+0/resize/1200x729!/format/webp/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fdc%2F04%2F8e3279ae42de99e8b3b8478db64f%2F1192686-sd-fi-gates-genomics-ec-005.jpg");
+      background-attachment: fixed;
+  }
+  
+  
+  
+  #bill1 {
+      margin: auto;
+      background-image: url("https://media.marketrealist.com/brand-img/ZlRmYGnBi/2160x1131/bill-gates-medical-education-1612827231254.jpg");
+      background-attachment: fixed;
+      z-index: -2;
+  }
+  
+  #bill1-5, #billi2-5, #billi3-5, #billi4-5, #billi5-5{
+      background-color: #f2f2f2;
+  }
+  
+  
+  
+  #billi2 {
+      background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-07/220713-bill-gates-jm-1540-7169cd.jpg");
+      background-attachment: fixed;
+  }
+  
+  
+  #billi3 {
+      background-image: url("https://media.wired.com/photos/5e6c06e613205e0008da2461/125:94/w_2124,h_1597,c_limit/Biz-billgates-950211062.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+  }
+  
+  
+  
+  #billi4 {
+      background-image: url("https://www.lifewire.com/thmb/dtM6RuQK8CTZzKw-55gBLhrmg9g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/72944804-56a6fa333df78cf772913cd3.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+  }
+  
+  
+  #billi5{
+      background-image: url("https://assets.gqindia.com/photos/624c370c21b835d59a335b22/16:9/w_2560%2Cc_limit/BillHappy.jpg");
+      background-attachment: fixed;
+  }
+  
+  
+  .subject-container {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(4, 23, 44, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .subject-par-container h2{
+    text-align: center;
+  }
+  
+  .subject-par-container h3{
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .subject-par-container p{
+    margin-left: 12px;
+    margin-right: 20px;
+    text-indent: 20px;
+    text-align: justify;
+  }   
+  .bossii{
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   border-radius: 60px;
+   margin-bottom: 100px;
+   
+}
+#form {
+    width: 350px;
+    margin: 20vh auto 0 auto;
+    margin: 20vw auto 0 auto;
+  }
+  
+#form {
+    width: 350px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: rgba(31, 25, 53, 0);
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: rgba(8, 12, 223, 0.4) 5px 5px, rgba(53, 4, 145, 0.651) 10px 10px, rgba(29, 5, 66, 0.2) 15px 15px, rgba(85, 21, 189, 0.1) 20px 20px, rgba(82, 46, 240, 0.05) 25px 25px;
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 93%;
+}
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.messagess{
+    padding-top: 25vh;
+}
+.sendmessage input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    padding-bottom: 152px;
+    width: 93%;
+}
