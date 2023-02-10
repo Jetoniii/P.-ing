@@ -1,4 +1,10 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -12,7 +18,7 @@
     <label for="show-menu" class="show-menu">Menu</label>
     <input type="checkbox" role="button">
     <ul id=menu>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <li><a href="biography.html">Biography</a></li>
       <li><a href="career.html">Career</a></li>
       <li><a href="qwertyu.html">Leave A Comment</a></li>
