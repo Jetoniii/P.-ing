@@ -140,30 +140,7 @@ body {
   input[type="checkbox"]:checked ~ #menu {
     display: block;
   }
-  /*Responsive Styles*/
-  @media screen and (max-width: 760px) {
-    /*Make dropdown links appear inline*/
-    nav ul {
-      position: static;
-      display: none;
-    }
-    /*Create vertical spacing*/
-    nav li {
-      margin-bottom: 1px;
-    }
-    /*Make all menu links full width*/
-    nav ul li,
-    nav li a {
-      width: 100%;
-    }
-    /*Display 'show menu' link*/
-    .show-menu {
-      display: block;
-    }
-  }
-  /*-- --*/
-  
-  /* Image Slider css */
+
   .slider {
     box-shadow: 0px 4px 10px #3606b991;
     padding: 0;
