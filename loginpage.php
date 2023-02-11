@@ -3,7 +3,17 @@
 if($_SERVER['REQUEST_METHOD']=='POST'){
     include 'Users.php';
     $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
+
+    $sql="insert into 'registration' (username,email,password)values('$username','$email','$password')";
+    $result = mysqli_query($con,$sql);
+
+    if($result){
+        echo "Data inserted succesfully";
+    }else{
+        die(mysqli_error($con));
+    }
 }
 
 
