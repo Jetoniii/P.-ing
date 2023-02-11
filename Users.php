@@ -1,16 +1,17 @@
 <?php
-session_start();
+$HOSTNAME='localhost';
+$USERNAME='root';
+$PASSWORD='';
+$DATABASE='signupforms';
 
-if(isset($_SESSION['user_role'])){
-  if($_SESSION['user_role'] === 'admin'){
-    header('Location: /admin/dashboard.php');
-    exit;
-  } else {
-    header('Location: /user/dashboard.php');
-    exit;
-  }
-} else {
-  header('Location: /login.php');
-  exit;
+
+
+$con=mysqli_connect($HOSTNAME,$USERNAME,$PASSWORD,$DATABASE);
+
+if($con){
+  echo "Connection succesful";
+}else{
+  die(mysqli_error($con));
 }
+
 ?>
