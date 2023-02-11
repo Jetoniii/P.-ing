@@ -1,5 +1,11 @@
 <?php
 
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    include 'Users.php';
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+}
+
 
 ?>
 
@@ -19,7 +25,7 @@
 </head>
 <body>
     <div class="container">
-        <form id="form" action="/" onsubmit="return validateForm()">
+        <form id="form" action="loginpage.php" method="post" onsubmit="return validateForm()">
             <h1>Registration</h1>
             <div class="input-control">
                 <label for="username">Username</label>
@@ -47,3 +53,5 @@
     
 </body>
 </html>
+
+

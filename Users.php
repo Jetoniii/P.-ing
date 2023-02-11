@@ -9,7 +9,7 @@ $DATABASE='signupforms';
 $con=mysqli_connect($HOSTNAME,$USERNAME,$PASSWORD,$DATABASE);
 
 if($con){
-  echo "Connection succesful";
+  echo "Connection successful";
 }else{
   die(mysqli_error($con));
 }
