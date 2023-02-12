@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $result = mysqli_query($con,$sql);
             if($result){
             $succes=1;
-            header('location:qwertyu.php');
+            // header('location:qwertyu.php');
             }else{
                die(mysqli_error($con));
     }

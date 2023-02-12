@@ -1,10 +1,39 @@
+<?php 
+
+$admin_user = array("Jeton", "jk57548@ubt-uni.net", "jk121", "admin");
+
+$is_admin = false;
+if (isset($_SESSION['user']) && empty(array_diff_assoc($_SESSION['user'], $admin_user))) {
+    $is_admin = true;
+}
+
+if ($is_admin) {
+    header("Location:admin.php");
+}
+
+
+ ?>
+
+
+<?php
+//establish database connection
+$HOSTNAME = "localhost";
+$USERNAME = "root";
+$PASSWORD = "";
+$DATABASE = "signupforms";
+$con = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
+
+if(mysqli_connect_errno()){
+    die("Failed to connect with MySQL: ". mysqli_connect_error());
+}
+?>
+
 <?php
 $login=0;
 $invalid=0;
 
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-    include 'Users.php';
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -18,7 +47,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $login=1;
             session_start();
             $_SESSION['username']=$username;
-            header('location:index.php');
+
 
 
 
@@ -152,3 +181,8 @@ if ($login) {
     <!-- onsubmit="return validateForm() -->
 </body>
 </html>
+
+<?php
+// close database connection
+mysqli_close($con);
+?>
