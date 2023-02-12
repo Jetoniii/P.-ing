@@ -10,51 +10,44 @@ form.addEventListener('submit', e => {
 });
 
 const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
+    const formControl = element.parentElement;
+    const error = formControl.querySelector('.error');
+    formControl.className = 'input-control error';
+    error.innerText = message;
 }
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+const setSuccess = (element) => {
+    const formControl = element.parentElement;
+    formControl.className = 'input-control success';
+}
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-};
-
-const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+const isEmailValid = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
 }
 
 const validateInputs = () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const textValue = text.value.trim();
-   
 
-    if(usernameValue === '') {
+    if (usernameValue === '') {
         setError(username, 'Username is required');
     } else {
         setSuccess(username);
     }
 
-    if(emailValue === '') {
+    if (emailValue === '') {
         setError(email, 'Email is required');
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
+    } else if (!isEmailValid(emailValue)) {
+        setError(email, 'Email is not valid');
     } else {
         setSuccess(email);
-    }}
+    }
 
-
-    
-
-
-  
-  
+    if (textValue === '') {
+        setError(text, 'Message is required');
+    } else {
+        setSuccess(text);
+    }
+}

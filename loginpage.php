@@ -18,10 +18,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         if($num>0){
             $user=1;
         }else{
-            $sql="insert into registration (username,email,password) values ('$username','$password','$email')";
+            $sql="insert into registration (username,email,password) values ('$username','$email','$password')";
             $result = mysqli_query($con,$sql);
             if($result){
             $succes=1;
+            header('location:qwertyu.php');
             }else{
                die(mysqli_error($con));
     }
@@ -36,6 +37,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon"  href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk2XBywdtgLSwKzI3MEW15PzC4jB9djXQ_4g&usqp=CAU"/>
     <link rel="stylesheet" href="styles/loginstyle.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +59,7 @@ if ($user) {
     </div>';
     echo '<style>
         .alert {
-            margin-top: 0;
+            margin-top: 0px;
             position: relative;
             background-color: #f8d7da;
             border-color: #f5c6cb;
@@ -140,7 +142,7 @@ if ($succes) {
                 <div class="error"></div>
             </div>
             <button type="submit">Sign Up</button>
-            <p>Already have an Account <a href="qwertyu.html" >Click Here</p>
+            <p>Already have an Account <a href="qwertyu.php" >Click Here</p>
         </form>
     </div>
     
