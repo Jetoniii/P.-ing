@@ -217,9 +217,7 @@ body {
       left: 0%;
     }
   }
-  /*-- --*/
-  
-  /*Container for responsive website*/
+
   
   .container {
     padding: 10px 20px;
@@ -280,10 +278,6 @@ body {
   .flex-par-container a {
     font-size: 14px;
   }
-  /*-- --*/
-  
- 
-  
   
   .column-left {
     float: left;
@@ -303,12 +297,6 @@ body {
     color: black;
     text-align: left;
   }
-  
-  /* Parallax Scrolling Effect*/
-  
-  
-
-
   .career-div{
       overflow: auto;
   }
