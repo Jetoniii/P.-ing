@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +25,7 @@
         </ul>
       </nav>
     <div class="bossii">
-        <form id="form" action="/" onsubmit="sendEmail(); reset(); return false;" >
+        <form id="form" action="/"  >
             <h1>Send a message!</h1>
             <div class="input-control">
                 <label for="username">Username</label>

@@ -57,7 +57,7 @@ if ($user) {
     </div>';
     echo '<style>
         .alert {
-            margin-top: 0px;
+            margin-top: 0;
             position: relative;
             background-color: #f8d7da;
             border-color: #f5c6cb;
